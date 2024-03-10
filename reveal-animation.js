@@ -1,22 +1,21 @@
-function handleScroll() {
-    var reveals = document.querySelectorAll(".reveal");
+let person = document.getElementById('person');
+let windowimg = document.getElementById('window');
+let desk = document.getElementById('desk');
 
+window.addEventListener('scroll', () => {
+    let value = window.scrollY;
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 5;
+    person.style.marginTop = value * 1 + 'px';
+    person.style.opacity = (100 -(value / 4)) + '%';
 
+    windowimg.style.opacity = (100 -(value / 2)) + '%';
 
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        }
+    desk.style.marginTop = value * .5 + 'px';
+    desk.style.opacity = (100 -(value / 8)) + '%';
+})
+
+window.onload = function() {
+    if (window.location.hash) {
+      window.location.hash = '';
     }
-}
-
-
-document.addEventListener("scroll", function() {
-    setTimeout(() => {
-        handleScroll();
-    }, 100)
-});
+};
