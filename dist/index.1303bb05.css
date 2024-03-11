@@ -242,11 +242,15 @@ h1 {
   grid-template-columns: 1fr auto;
   gap: 5em;
   margin: 1em auto;
+  padding: 1em;
   display: grid;
 }
 
 .about-content {
+  background-color: #ffffff80;
+  border-radius: 10px;
   margin: auto 0;
+  padding: 1em 2em;
 }
 
 .about h1 {
@@ -376,6 +380,10 @@ h1 {
   gap: .5em;
   padding-bottom: 2em;
   display: flex;
+}
+
+.contact-section h2 {
+  text-align: center;
 }
 
 .contact-box {

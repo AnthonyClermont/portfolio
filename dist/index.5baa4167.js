@@ -641,7 +641,8 @@ var _motion = require("motion");
     });
     (0, _motion.animate)(target.querySelectorAll([
         "h1",
-        "p"
+        "p",
+        ".about-content"
     ]), {
         x: [
             "50px",

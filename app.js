@@ -26,7 +26,7 @@ inView('.about-section', ({target}) => {
         { duration: 1, delay: stagger(0.5, {start: .5}), easing: "ease-out"}
     )
     animate(
-        target.querySelectorAll(["h1", "p"]), {
+        target.querySelectorAll(["h1", "p", ".about-content"]), {
             x: ["50px", "0"],
             opacity: ["0", "100"],
         },
